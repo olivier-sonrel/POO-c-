@@ -24,6 +24,7 @@ public:
     void setWeight(int weight);
 
     Gender getGender();
+    string stringGender();
     void setGender(Gender gender);
 
     time_t getBirthday();

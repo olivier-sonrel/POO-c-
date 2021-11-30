@@ -26,8 +26,7 @@ int main() {
             20/05/2001
             );
 
-    string name1 = cat->getAllName();
-    string name2 = person->getAllName();
-    std::cout << "Hello : " + name1 + name2 << std::endl;
+    std::cout << "Hello : " + cat->getAllName() + ' ' + cat->stringGender() << std::endl;
+    std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
     return 0;
 }

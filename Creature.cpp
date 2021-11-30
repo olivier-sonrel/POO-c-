@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <utility>
 #include "Creature.h"
@@ -39,7 +40,19 @@ void Creature::setWeight(int weight) {
 }
 
 Gender Creature::getGender() {
-    return {};
+    return this->gender;
+}
+
+string Creature::stringGender() {
+    string os = "empty";
+    switch(this->gender)
+    {
+        case Gender::Sexless : os = "Sexless";
+        case Gender::Hermaphrodite   : os = "Hermaphrodite";
+        case Gender::Male : os = "Male";
+        case Gender::Female  : os = "Female";
+    }
+    return os;
 }
 
 void Creature::setGender(Gender gender) {
