@@ -12,7 +12,7 @@ public:
         string species,
         int size,
         int weight,
-        /*Gender gender,*/
+        Gender gender,
         time_t birthday
         );
     ~Cat() override;

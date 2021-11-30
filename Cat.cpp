@@ -8,7 +8,7 @@ Cat::Cat(string firstname,
          string species,
          int size,
          int weight,
-         /*Gender gender,*/
+         Gender gender,
          time_t birthday
 ) {
     this->setFirstname(firstname);
@@ -16,7 +16,7 @@ Cat::Cat(string firstname,
     this->setSpecies(species);
     this->setSize(size);
     this->setWeight(weight);
-    /*this->setGender(gender);*/
+    this->setGender(gender);
     this->setBirthday(birthday);
 }
 
