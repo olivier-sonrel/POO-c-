@@ -9,7 +9,7 @@ Person::Person(std::string firstname,
                std::string mail,
                int size,
                int weight,
-               /*Gender gender,*/
+               Gender gender,
                time_t birthday
 ) {
     this->setFirstname(firstname);
@@ -17,7 +17,7 @@ Person::Person(std::string firstname,
     this->setMail(mail);
     this->setSize(size);
     this->setWeight(weight);
-    /*this->setGender(gender);*/
+    this->setGender(gender);
     this->setBirthday(birthday);
 }
 
