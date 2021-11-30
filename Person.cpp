@@ -1,38 +1,24 @@
-//
-// Created by olivier on 29/11/2021.
-//
-
 #include "Person.h"
+#include <utility>
 using namespace std;
 
-Person::Person() = default;
 Person::~Person() = default;
 
-Person::Person(string firstname, string lastname) {
-    this->setFirstname(firstname);
-    this->setLastname(lastname);
-}
-
-Person::Person(string firstname, string lastname, string mail) {
+Person::Person(std::string firstname,
+               std::string lastname,
+               std::string mail,
+               int size,
+               int weight,
+               /*Gender gender,*/
+               time_t birthday
+) {
     this->setFirstname(firstname);
     this->setLastname(lastname);
     this->setMail(mail);
-}
-
-string Person::getFirstname() {
-    return this->firstname;
-}
-
-void Person::setFirstname(string firstname) {
-    this->firstname = firstname;
-}
-
-string Person::getLastname() {
-    return this->lastname;
-}
-
-void Person::setLastname(string lastname) {
-    this->lastname = lastname;
+    this->setSize(size);
+    this->setWeight(weight);
+    /*this->setGender(gender);*/
+    this->setBirthday(birthday);
 }
 
 string Person::getMail() {
@@ -40,11 +26,16 @@ string Person::getMail() {
 }
 
 void Person::setMail(string mail) {
-    this->mail = mail;
+    this->mail = std::move(mail);
 }
 
-string Person::getUserName() {
-    return this->firstname + ' ' + this->lastname;
+
+string Person::getAddress() {
+    return this->address;
+}
+
+void Person::setAddress(string address) {
+    this->address = std::move(address);
 }
 
 

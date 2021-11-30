@@ -1,42 +1,36 @@
-//
-// Created by olivier on 29/11/2021.
-//
-
 #ifndef UNTITLED_PERSON_H
 #define UNTITLED_PERSON_H
 
 #include <iostream>
 #include <cstring>
 #include <new>
+#include "Creature.h"
 
 using namespace std;
 
-class Person {
-    public:
+class Person: public Creature {
+public:
 
-    Person();
-    Person(std::string firstname,std::string lastname);
-    Person(std::string firstname,std::string lastname,std::string mail);
-    virtual ~Person();
-
-    string getFirstname();
-    void setFirstname(string firstname);
-
-    string getLastname();
-    void setLastname(string lastname);
+    Person(std::string firstname,
+           std::string lastname,
+           std::string mail,
+           int size,
+           int weight,
+           /*Gender gender,*/
+           time_t birthday
+           );
+    ~Person() override;
 
     string getMail();
     void setMail(string mail);
 
-    string getUserName();
+    string getAddress();
+    void setAddress(string address);
 
-    protected:
-    private:
-    string firstname;
-    string lastname;
+protected:
+private:
     string mail;
     string address;
-    time_t birthday{};
 };
 
 
