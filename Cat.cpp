@@ -22,8 +22,7 @@ Cat::Cat(string firstname,
 }
 
 /*
- *  Cat generator from form,
- *  the point is to get the string in
+ *  Cat construct from form
  */
 Cat::Cat(string firstname,
          string lastname,
@@ -33,18 +32,18 @@ Cat::Cat(string firstname,
          string gender,
          string birthday
          ) {
-    this->setFirstname(firstname);
-    this->setLastname(lastname);
-    this->setSpecies(species);
+    this->setFirstname(std::move(firstname));
+    this->setLastname(std::move(lastname));
+    this->setSpecies(std::move(species));
     this->setSize(std::stoi(size));
     this->setWeight(std::stoi(weight));
     this->setGender(Gender{std::stoi(gender)});
 
-    struct std::tm tm;
+    struct std::tm tm{};
     std::istringstream ss(birthday);
     ss >> std::get_time(&tm, "%y:%m:%d");
     time_t date = mktime(&tm);
-    this->setBirthday(date);/* todo string to tim_t*/
+    this->setBirthday(date);
 }
 
 string Cat::getSpecies() {

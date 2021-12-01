@@ -12,8 +12,8 @@ int main() {
     char speciesIn [80];
     char size[2];
     char weight[2];
-    char gender;
-    char birthday;
+    char gender[20];
+    char birthday[11];
 
     /* TODO gender stringify in gender class */
 /*    auto *cat = new Cat(
