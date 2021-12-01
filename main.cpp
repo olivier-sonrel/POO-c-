@@ -70,7 +70,7 @@ int main() {
     );
 
 
-    std::cout << "Your cat : " + cat->getAllName() + ' ' + cat->stringGender() << std::endl;
+    std::cout << "Your cat : " + cat->getAllName() + ' ' + cat->stringGender() + ' ' + cat->stringBirthday() << std::endl;
     //std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
     return 0;
 }

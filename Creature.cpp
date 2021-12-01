@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <utility>
+#include <sstream>
 #include "Creature.h"
 
 Creature::Creature() = default;
@@ -65,6 +66,15 @@ string Creature::getAllName() {
 
 time_t Creature::getBirthday() {
     return this->birthday;
+}
+
+string Creature::stringBirthday() {
+    time_t date = this->getBirthday();
+    tm * ptm = localtime(&date);
+    char buffer[32];
+// Format: Mo, 15.06.2009 20:20:00
+    strftime(buffer, 32, "%a, %d.%m.%Y %H:%M:%S", ptm);
+    return buffer;
 }
 
 void Creature::setBirthday(time_t birthday) {
