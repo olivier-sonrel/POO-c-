@@ -45,15 +45,15 @@ Gender Creature::getGender() {
 }
 
 string Creature::stringGender() {
-    string os = "empty";
+    string result = "unknown";
     switch(this->gender)
     {
-        case Gender::Sexless : os = "Sexless";
-        case Gender::Hermaphrodite   : os = "Hermaphrodite";
-        case Gender::Male : os = "Male";
-        case Gender::Female  : os = "Female";
+        case Gender::Sexless : result = "Sexless";
+        case Gender::Hermaphrodite   : result = "Hermaphrodite";
+        case Gender::Male : result = "Male";
+        case Gender::Female  : result = "Female";
     }
-    return os;
+    return result;
 }
 
 void Creature::setGender(Gender gender) {
@@ -68,11 +68,15 @@ time_t Creature::getBirthday() {
     return this->birthday;
 }
 
+/**
+ * stringify the birthday
+ * Format: Mo, 15.06.2009 20:20:00
+ * @return string
+ */
 string Creature::stringBirthday() {
     time_t date = this->getBirthday();
     tm * ptm = localtime(&date);
     char buffer[32];
-// Format: Mo, 15.06.2009 20:20:00
     strftime(buffer, 32, "%a, %d.%m.%Y %H:%M:%S", ptm);
     return buffer;
 }
