@@ -36,6 +36,7 @@ int main() {
             20/05/2001
             );*/
     cout << "Hello mister, would you register a cat ?" << endl;
+    /*TODO put formMethod in her own class*/
     printf("Give us a firstname : ");
     cin >> firstnameIn;
 
@@ -51,7 +52,8 @@ int main() {
     printf("Give us a weight : ");
     cin >> weight;
 
-    printf("Give us a gender in this choices : ");/* TODO chice 1,2,3,4*/
+    /* TODO choice 1,2,3,4 creer foreach qui parcour et creer affichage*/
+    printf("Give us a gender in this choices : ");
     cin >> gender;
 
     printf("Give us a birthday format year:month:day : ");
@@ -66,6 +68,7 @@ int main() {
             gender,
             birthday
     );
+
 
     std::cout << "Your cat : " + cat->getAllName() + ' ' + cat->stringGender() << std::endl;
     //std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
