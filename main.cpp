@@ -88,7 +88,7 @@ int main() {
             birthday
     );*/
     auto *person = new Person();
-/* TODO form Person*/
+/* TODO form Cat */
     std::cout << person->toString() << std::endl;
     //std::cout << cat->toString() << std::endl;
     //std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
