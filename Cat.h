@@ -27,10 +27,15 @@ public:
     ~Cat() override;
 
     string getSpecies();
+
+    string toString();
+
     void setSpecies(string species);
 
 protected:
 private:
+    friend std::ostream& operator<<(std::ostream&, Cat&);
+    int i;
     string species{};
 };
 
