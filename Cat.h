@@ -3,9 +3,10 @@
 
 #include "Creature.h"
 #include <cstring>
+
 using namespace std;
 
-class Cat: public Creature {
+class Cat : public Creature {
 public:
     Cat(string firstname,
         string lastname,
@@ -24,17 +25,19 @@ public:
         string gender,
         string birthday
     );
+
     ~Cat() override;
 
     string getSpecies();
 
-    string toString();
-
     void setSpecies(string species);
+
+    string toString();
 
 protected:
 private:
-    friend std::ostream& operator<<(std::ostream&, Cat&);
+    friend std::ostream &operator<<(std::ostream &, Cat &);
+
     int i;
     string species{};
 };

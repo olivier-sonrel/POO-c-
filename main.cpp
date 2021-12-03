@@ -10,6 +10,8 @@ int main() {
     char firstnameIn [80];
     char lastnameIn [80];
     char speciesIn [80];
+    char mailIn [80];
+    char addressIn [80];
     char size[2];
     char weight[2];
     char gender[20];
@@ -35,7 +37,8 @@ int main() {
             Gender::Hermaphrodite,
             20/05/2001
             );*/
-    cout << "Hello mister, would you register a cat ?" << endl;
+    //cout << "Hello mister, would you register a cat ?" << endl;
+    cout << "Hello mister, would you register as a person ?" << endl;
     /*TODO put formMethod in her own class*/
     printf("Give us a firstname : ");
     cin >> firstnameIn;
@@ -43,8 +46,14 @@ int main() {
     printf("Give us a lastname : ");
     cin >> lastnameIn;
 
-    printf("Give us a species : ");
-    cin >> speciesIn;
+/*    printf("Give us a species : ");
+    cin >> speciesIn;*/
+
+    printf("Give us a mail : ");
+    cin >> mailIn;
+
+    printf("Give us an address : ");
+    cin >> addressIn;/* TODO problem espace*/
 
     printf("Give us a size : ");
     cin >> size;
@@ -59,7 +68,7 @@ int main() {
     printf("Give us a birthday format year:month:day : ");
     cin >> birthday;
 
-    auto *cat = new Cat(
+/*    auto *cat = new Cat(
             firstnameIn,
             lastnameIn,
             speciesIn,
@@ -67,10 +76,21 @@ int main() {
             weight,
             gender,
             birthday
+    );*/
+    auto *person = new Person(
+            firstnameIn,
+            lastnameIn,
+            mailIn,
+            addressIn,
+            size,
+            weight,
+            gender,
+            birthday
     );
 
 /* TODO tostring Person*/
-    std::cout << cat->toString() << std::endl;
+    std::cout << person->toString() << std::endl;
+    //std::cout << cat->toString() << std::endl;
     //std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
     return 0;
 }
