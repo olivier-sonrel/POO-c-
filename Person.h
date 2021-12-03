@@ -10,6 +10,7 @@ using namespace std;
 
 class Person : public Creature {
 public:
+    Person();
     Person(string firstname,
            string lastname,
            string mail,
@@ -28,7 +29,6 @@ public:
            string gender,
            string birthday
     );
-
     ~Person() override;
 
     string getMail();
