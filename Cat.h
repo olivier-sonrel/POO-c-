@@ -14,7 +14,16 @@ public:
         int weight,
         Gender gender,
         time_t birthday
-        );
+    );
+
+    Cat(string firstname,
+        string lastname,
+        string species,
+        string size,
+        string weight,
+        string gender,
+        string birthday
+    );
     ~Cat() override;
 
     string getSpecies();

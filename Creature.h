@@ -28,6 +28,7 @@ public:
     void setGender(Gender gender);
 
     time_t getBirthday();
+    string stringBirthday();
     void setBirthday(time_t birthday);
 
     string getAllName();
