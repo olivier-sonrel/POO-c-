@@ -28,13 +28,13 @@ public:
 
     string getSpecies();
 
-    string toString() const;
+    string toString();
 
     void setSpecies(string species);
 
 protected:
 private:
-    friend std::ostream& operator<<(std::ostream&, const Cat&);
+    friend std::ostream& operator<<(std::ostream&, Cat&);
     int i;
     string species{};
 };
