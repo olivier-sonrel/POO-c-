@@ -82,3 +82,14 @@ void Cat::setSpecies(string species) {
 }
 
 
+ostream& operator << (ostream &os, Cat &s) {
+    //return (os << "Name: " << s.firstname << "\n Age: " << s.age << "\n Final Grade: " << s.finalGrade  << std::endl);
+    return (os << "Name: " << s.getAllName() << "\n Age: " << s.getLastname() << "\n Final Grade: " << s.finalGrade  << std::endl);
+}
+
+string Cat::toString() const {
+    stringstream ss;
+    ss << (*this);
+    return ss.str();
+}
+

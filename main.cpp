@@ -71,6 +71,7 @@ int main() {
 
 /* TODO tostring*/
     std::cout << "You are a cat : " + cat->getAllName() + ' ' + cat->stringGender() + ' ' + cat->stringBirthday() << std::endl;
+    std::cout << cat->toString() << std::endl;
     //std::cout << "Hello : " + person->getAllName() + ' ' + person->getMail() << std::endl;
     return 0;
 }
