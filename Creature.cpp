@@ -43,16 +43,21 @@ void Creature::setWeight(int weight) {
 Gender Creature::getGender() {
     return this->gender;
 }
+/* TODO et je crois que le setter marche pas choice 1,2,3,4 creer foreach qui parcour et creer affichage*/
+string Creature::choiceGenders() {
+    return "Sexless : 0, Hermaphrodite : 1, Male : 2, Female : 3..";
+}
 
-/* TODO try gender stringify in gender class */
 string Creature::stringGender() {
-    string result = "unknown";
+    string result;
     switch(this->gender)
     {
         case Gender::Sexless : result = "Sexless";
         case Gender::Hermaphrodite   : result = "Hermaphrodite";
         case Gender::Male : result = "Male";
         case Gender::Female  : result = "Female";
+
+        default: result = "unknown";
     }
     return result;
 }

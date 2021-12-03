@@ -25,6 +25,7 @@ public:
 
     Gender getGender();
     string stringGender();
+    string choiceGenders();
     void setGender(Gender gender);
 
     time_t getBirthday();

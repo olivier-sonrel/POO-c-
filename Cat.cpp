@@ -93,8 +93,7 @@ Cat::Cat() {
     printf("Give us a weight : ");
     cin >> weight;
 
-    /* TODO choice 1,2,3,4 creer foreach qui parcour et creer affichage*/
-    printf("Give us a gender in this choices : ");
+    printf("Give us a gender in this choices : %s", this->choiceGenders().c_str() );
     cin >> gender;
 
     printf("Give us a birthday format year:month:day : ");
