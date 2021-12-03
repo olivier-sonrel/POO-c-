@@ -56,6 +56,57 @@ Person::Person(string firstname,
     this->setBirthday(date);
 }
 
+ Person::Person() {
+     char firstnameIn [80];
+    char lastnameIn [80];
+    char speciesIn [80];
+    char mailIn [80];
+    char addressIn [80];
+    char size[2];
+    char weight[2];
+    char gender[20];
+    char birthday[11];
+
+    cout << "Hello mister, would you register as a person ?" << endl;
+    /*TODO put formMethod in her own class*/
+    printf("Give us a firstname : ");
+    cin >> firstnameIn;
+
+    printf("Give us a lastname : ");
+    cin >> lastnameIn;
+
+/*    printf("Give us a species : ");
+    cin >> speciesIn;*/
+
+    printf("Give us a mail : ");
+    cin >> mailIn;
+
+    printf("Give us an address : ");
+    cin >> addressIn;/* TODO problem espace*/
+
+    printf("Give us a size : ");
+    cin >> size;
+
+    printf("Give us a weight : ");
+    cin >> weight;
+
+    /* TODO choice 1,2,3,4 creer foreach qui parcour et creer affichage*/
+    printf("Give us a gender in this choices : ");
+    cin >> gender;
+
+    printf("Give us a birthday format year:month:day : ");
+    cin >> birthday;
+
+     new(this) Person(firstnameIn,
+                      lastnameIn,
+                      mailIn,
+                      addressIn,
+                      size,
+                      weight,
+                      gender,
+                      birthday);
+}
+
 string Person::getMail() {
     return this->mail;
 }
