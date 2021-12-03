@@ -3,11 +3,13 @@
 
 #include "Creature.h"
 #include <cstring>
+#include <iostream>
 
 using namespace std;
 
 class Cat : public Creature {
 public:
+    Cat();
     Cat(string firstname,
         string lastname,
         string species,

@@ -23,9 +23,11 @@ Person::Person(string firstname,
 }
 
 /**
- * form constructor
+ * from string constructor
  * @param firstname
  * @param lastname
+ * @param mail
+ * @param address
  * @param size
  * @param weight
  * @param gender
@@ -56,10 +58,12 @@ Person::Person(string firstname,
     this->setBirthday(date);
 }
 
+/**
+ * form constructor
+ */
  Person::Person() {
      char firstnameIn [80];
     char lastnameIn [80];
-    char speciesIn [80];
     char mailIn [80];
     char addressIn [80];
     char size[2];
@@ -68,15 +72,12 @@ Person::Person(string firstname,
     char birthday[11];
 
     cout << "Hello mister, would you register as a person ?" << endl;
-    /*TODO put formMethod in her own class*/
+
     printf("Give us a firstname : ");
     cin >> firstnameIn;
 
     printf("Give us a lastname : ");
     cin >> lastnameIn;
-
-/*    printf("Give us a species : ");
-    cin >> speciesIn;*/
 
     printf("Give us a mail : ");
     cin >> mailIn;

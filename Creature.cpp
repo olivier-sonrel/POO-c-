@@ -44,6 +44,7 @@ Gender Creature::getGender() {
     return this->gender;
 }
 
+/* TODO try gender stringify in gender class */
 string Creature::stringGender() {
     string result = "unknown";
     switch(this->gender)
